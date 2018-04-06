@@ -1,0 +1,327 @@
+.parkingLot {
+    width: 800px;
+    height: 600px;
+    /* background-color:blue; */
+    position: relative;
+    margin: 0 auto;
+    background-image: url('http://s29.postimg.org/kfq1jwsn9/parkinglot.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-color: grey;
+}
+
+.opening,
+.result {
+    background-color: rgba(0, 0, 0, .7);
+    position: absolute;
+    z-index: 200;
+    height: 100%;
+    width: 100%;
+}
+
+.result {
+    display: none;
+    background-color: black;
+    background-color: rgba(0, 0, 0, .7);
+    color: white;
+}
+
+.result h1 {
+    position: absolute;
+    /* left: 380px; */
+    top: 280px;
+    font-size: 50px;
+    text-align: center;
+    width: 100%;
+}
+
+.beginButton,
+.playAgain {
+    position: absolute;
+    left: 320px;
+    text-align: center;
+    /* width:100%; */
+    top: 420px;
+    background-color: green;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.slot {
+    /* background-color:white; */
+    width: 15%;
+    height: 100%;
+    display: inline-block;
+    /* margin: 0 5%; */
+    /* margin-right: 7%; */
+    margin-right: 1.46%;
+}
+
+.section {
+    position: absolute;
+    width: 100%;
+    /* height:37%; */
+    height: 100px;
+    /* padding-left:9.5%; */
+    /* padding-left: 75px; */
+}
+
+.section .slot:first-child {
+    margin-left: 9.5%;
+    margin-left: 17.5%;
+}
+
+.top {
+    top: 0;
+}
+
+.bottom {
+    bottom: 0;
+}
+
+.top-middle {
+    top: 200px;
+}
+
+.bottom-middle {
+    bottom: 200px;
+}
+
+.countDown {
+    display: none;
+    position: absolute;
+    top: 220px;
+    width: 100%;
+    text-align: center;
+    font-size: 80px;
+}
+
+.car {
+    /*  width:64px;
+    height: 96px; */
+    /* background-image:url('http://imgh.us/cars_racer.svg'); */
+    /* background-image:url('http://www.codethislab.com/bozze/codecanyon/driveyourcar/readme/assets/images/enemy.png'); */
+    background-size: 1144px 175px;
+    /* background-size: 48px 100px; */
+    background-repeat: no-repeat;
+    /* background-position: 30% 0; */
+    position: absolute;
+    z-index: 100;
+    -webkit-transition: background-image 0.5s ease-in-out;
+    transition: background-image 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.silhouette {
+    background-color: grey !important;
+    background-position: -196px 0 !important;
+    -webkit-transition: background-image 0.5s ease-in-out;
+    transition: background-image 0.5s ease-in-out;
+    opacity: .7;
+}
+
+.chek {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.checked .chek {
+    background-image: url('http://icons.iconarchive.com/icons/visualpharm/must-have/256/Check-icon.png');
+    background-size: 50px 50px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    transition: background-image 0.5s ease;
+}
+
+.xed .chek {
+    background-image: url('http://upload.wikimedia.org/wikipedia/commons/2/28/White_X_in_red_background.svg');
+    background-size: 50px 50px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    /* transition: background-color 0.5s ease; */
+    transition: background-image 0.5s ease;
+}
+
+.car-black {
+    background-color: black;
+    /* background-position:  -196px 0 ; */
+}
+
+.car-red {
+    background-color: red;
+    /* background-position: -388px 0; */
+}
+
+.car-orange {
+    background-color: orange;
+    /* background-position: -485px 0; */
+}
+
+.car-yellow {
+    background-color: yellow;
+    /* background-position: -99px 0; */
+}
+
+.car-purple {
+    background-color: purple;
+    /* background-position: -295px 0; */
+}
+
+.car-green {
+    background-color: green;
+}
+
+.car-pink {
+    background-color: pink;
+}
+
+.car-blue {
+    background-color: blue;
+}
+
+/* .car1{right:80px;} */
+
+@keyframes shake {
+    0%,
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: translate3d(-10px, 0, 0);
+    }
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: translate3d(10px, 0, 0);
+    }
+}
+
+@-webkit-keyframes shake {
+    0%,
+    100% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        -webkit-transform: translate3d(-10px, 0, 0);
+        transform: translate3d(-10px, 0, 0);
+    }
+    20%,
+    40%,
+    60%,
+    80% {
+        -webkit-transform: translate3d(10px, 0, 0);
+        transform: translate3d(10px, 0, 0);
+    }
+}
+
+@keyframes shake {
+    0%,
+    100% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        -webkit-transform: translate3d(-10px, 0, 0);
+        transform: translate3d(-10px, 0, 0);
+    }
+    20%,
+    40%,
+    60%,
+    80% {
+        -webkit-transform: translate3d(10px, 0, 0);
+        transform: translate3d(10px, 0, 0);
+    }
+}
+
+.xed {
+    -webkit-animation-name: shake;
+    animation-name: shake;
+}
+
+.xed,
+.checked {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@-webkit-keyframes tada {
+    0% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+    10%,
+    20% {
+        -webkit-transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+        transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+    }
+    30%,
+    50%,
+    70%,
+    90% {
+        -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+        transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    }
+    40%,
+    60%,
+    80% {
+        -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+        transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    }
+    100% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+@keyframes tada {
+    0% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+    10%,
+    20% {
+        -webkit-transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+        transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+    }
+    30%,
+    50%,
+    70%,
+    90% {
+        -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+        transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    }
+    40%,
+    60%,
+    80% {
+        -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+        transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    }
+    100% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+.checked {
+    -webkit-animation-name: tada;
+    animation-name: tada;
+}
+
