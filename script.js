@@ -120,7 +120,7 @@ $(document).ready(function() {
         cars.each(function(index, value) {
 
             var target = coords[index];
-            var origin = $(this).offset();
+            var origin = $(this).position();
 
             var middleY = parkingLotDiv.height() / 2;
             var middleYAdjusted = (middleY / 2) - (cars.height() / 2);
